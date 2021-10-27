@@ -423,7 +423,7 @@ a {
 }
 .w3-sidebar {
   height: 100%;
-  width: 200px;
+  width: 300px;
   background-color: #fff;
   position: fixed !important;
   z-index: 1;
@@ -670,7 +670,7 @@ a {
   margin-right: auto;
 }
 .w3-content {
-  max-width: 980px;
+  max-width: 1500px;
 }
 .w3-auto {
   max-width: 1140px;
@@ -679,6 +679,7 @@ a {
   display: table;
   width: 100%;
 }
+
 .w3-cell {
   display: table-cell;
 }

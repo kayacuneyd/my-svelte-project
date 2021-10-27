@@ -1,20 +1,31 @@
 <script>
-  import LeftColumn from "./LeftColumn.svelte";
   import RightColumn from "./RightColumn.svelte";
+  import Sidebar from "./Sidebar.svelte";
+
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
 </script>
 
+<head:svelte>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap"
+    rel="stylesheet"
+  />
+</head:svelte>
+
+<!-- Sidebar -->
+<Sidebar />
+
 <!-- Page Container -->
-<div class="w3-content" style="max-width:1400px;">
-  <!-- <img
-    class="w3-image"
-    src="https://www.w3schools.com/w3css/img_snowtops.jpg"
-    alt="Norway"
-    style="width:100%"
-  /> -->
+<div class="w3-content">
+  <button class="w3-button w3-teal w3-xlarge sidebar-button" on:click={w3_open}
+    >☰</button
+  >
   <!-- The Grid -->
   <div class="w3-row">
-    <LeftColumn />
-
     <!-- Right Column -->
     <RightColumn />
 
@@ -41,4 +52,7 @@
 </footer>
 
 <style>
+  .sidebar-button {
+    border-radius: 0 0 20px 0;
+  }
 </style>
