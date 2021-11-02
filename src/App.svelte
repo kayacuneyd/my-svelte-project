@@ -1,10 +1,16 @@
 <script>
-  import RightColumn from "./RightColumn.svelte";
-  import Sidebar from "./Sidebar.svelte";
+  /* import { onMount } from "svelte"; */
+  import Down from "./Down.svelte";
+  import Footer from "./Footer.svelte";
+  import Menu from "./Menu.svelte";
 
-  function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-  }
+  /* const apiURL = "./assets/js/data.json";
+  let data = [];
+
+  onMount(async function () {
+    const response = await fetch(apiURL);
+    data = await response.json();
+  }); */
 </script>
 
 <head:svelte>
@@ -16,43 +22,36 @@
   />
 </head:svelte>
 
-<!-- Sidebar -->
-<Sidebar />
-
 <!-- Page Container -->
-<div class="w3-content">
-  <button class="w3-button w3-teal w3-xlarge sidebar-button" on:click={w3_open}
+<div class="w3-container-full w3-footer-color">
+  <!-- <button class="w3-button w3-teal w3-xlarge sidebar-button" on:click={w3_open}
     >☰</button
-  >
-  <!-- The Grid -->
-  <div class="w3-row">
-    <!-- Right Column -->
-    <RightColumn />
+  > -->
 
+  <div class="w3-top w3-shadow-light">
+    <Menu />
+  </div>
+
+  <!-- The Grid -->
+  <div class="w3-row w3-margin-top-15vh">
+    <!-- Right Column -->
+
+    <Down />
+    <!-- {#each data as item}
+      <div>
+        <p>{item.subtitels}</p>
+      </div>
+    {/each} -->
     <!-- End Grid -->
   </div>
 
   <!-- End Page Container -->
 </div>
 
-<footer class="w3-container w3-grey w3-center">
-  <p>Find me on social media.</p>
-  <i class="fa fa-facebook-official w3-hover-opacity" />
-  <i class="fa fa-instagram w3-hover-opacity" />
-  <i class="fa fa-snapchat w3-hover-opacity" />
-  <i class="fa fa-pinterest-p w3-hover-opacity" />
-  <i class="fa fa-twitter w3-hover-opacity" />
-  <i class="fa fa-linkedin w3-hover-opacity" />
-  <p>
-    Powered by <a
-      href="https://www.w3schools.com/w3css/default.asp"
-      target="_blank">w3.css</a
-    >
-  </p>
-</footer>
+<Footer />
 
 <style>
-  .sidebar-button {
+  /* .sidebar-button {
     border-radius: 0 0 20px 0;
-  }
+  } */
 </style>

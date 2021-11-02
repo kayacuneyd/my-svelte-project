@@ -1,6 +1,8 @@
-<script></script>
+<script>
+  import Social from "./Social.svelte";
+</script>
 
-<!-- Left Column/Sidebar -->
+<!-- Up -->
 <!-- <div class="w3-third"> -->
 <div class="w3-white w3-text-grey">
   <div class="w3-display-container ">
@@ -19,25 +21,10 @@
     </h2>
     <p class="w3-center">Researcher / PhD. Candidate</p>
   </div>
-  <div class="w3-container w3-center">
-    <i class="fa fa-facebook-official w3-i" />
-    <i class="fa fa-instagram w3-i" />
-    <i class="fa fa-envelope w3-i" />
-    <br />
-  </div>
+  <Social />
 </div>
 <br />
 
-<!-- End Left Column/Sidebar -->
+<!-- End -->
 
 <!-- </div> -->
-<style>
-  .w3-i {
-    font-size: 35px;
-    color: blueviolet;
-  }
-
-  .w3-i:hover {
-    color: red;
-  }
-</style>
